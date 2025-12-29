@@ -1,0 +1,796 @@
+
+body#Pelicula {
+    background-color: #000 !important; /* Fondo negro solo para este HTML */
+    color: #fff; /* Texto blanco para mejor visibilidad */
+}
+/*Fondo*/
+body {
+    
+    background-size: cover; /* Para que la imagen cubra todo el fondo */
+    background-position: center; /* Para centrar la imagen en el fondo */
+    
+    font-family: 'Roboto', sans-serif;
+    font-display: swap;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 0px; 
+}
+
+html{
+    font-family: sans-serif;
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+
+}
+
+
+
+/*------------------------------------------Barra superior--------------------------------------------------------*/
+
+/* Estilos de menú superior*/
+nav {
+    background-color: #000000;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 50px 10px 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+    margin-left: -30px;
+    margin-right: -30px;    
+    z-index: 100;
+    
+}
+
+/* Estilos de menu*/
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    display: flex;
+    align-items:center;
+    
+}
+
+/* Estilos de logo*/
+nav img {
+    width: 50px;
+    height: 50px; 
+    float: left;
+    
+}
+
+/* Estilos de nombre*/
+.poetsen-one-regular {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-size: 35px;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    float: left;
+  }
+
+/*Menu de navegacion*/
+li {
+    display: inline;
+    margin-right: 20px;
+    font-size: 14px;
+    
+}
+
+/*Menu de navegacion*/
+nav a, footer a{
+    font-family: 'Poppins', 'Helvetica', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    color: #fff;
+    font-size: 14px;
+}
+
+.navegador_derecho {
+    padding: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    width: auto;
+    margin-right: 0;
+    height: 100%;
+    margin-left: 350px;
+}
+
+.busqueda{
+    background-color: #3e3e3e75;
+    
+}
+nav input{
+    width: 200px; /* Ancho del input */
+    padding: 10px; /* Espacio interno */
+    border: none; /* Quita el borde */
+    background-color: transparent; /* Fondo transparente */
+    outline: none; /* Quita el borde de enfoque */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+/*------------------------------------------Barra inferior--------------------------------------------------------*/
+/* Estilos de menú inferior*/
+footer {
+     background-color: #222020; /* Color de fondo */
+    color: #fff;
+    width: calc(100% +100px); /* Aumenta el ancho en 100px para cubrir los márgenes */
+    padding: 0px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+    position: relative;
+    left: -10px; 
+    
+}
+
+footer div{
+    margin: 0px;
+    padding: 10px;
+    
+}
+footer li{
+    display: inline;
+    margin-right: 15px;
+}
+
+footer img{
+    width: 45px;
+    height: 45px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.footer-copyright {
+    background-color: #181616; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 10px; /* Espaciado interior */
+    text-align: center; /* Centrar el texto */
+    font-size: 14px; /* Tamaño de fuente */
+    font-style: italic; /* Estilo de fuente */
+}
+
+/*------------------------------------------Enlaces--------------------------------------------------------*/
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.enlace_noticia{
+    display: flex;
+    align-items:center;   
+}
+
+a:hover{
+    color:hotpink;
+}
+
+/*------------------------------------------Tipo de letra--------------------------------------------------------*/
+.titulo{
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 60px;
+
+}
+
+/*------------------------------------------Login y Register--------------------------------------------------------*/
+.form-container {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 400px;
+    background-color: #2C2F35;
+    padding: 40px 50px 50px;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+
+  }
+
+  .form-container h1{
+    font-size: 30px;
+    margin-bottom: 60px;
+    color: white;
+    position: relative;
+}
+
+.form-container h1::after{
+    content: '';
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background-color: #04BD7D;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+  
+  .form-container h2 {
+    margin-top: 0;
+  }
+
+
+  .form-login {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    transform: translate(-50%, -50%);
+  
+    max-width: 400px;
+    background-color: #2C2F35;
+    padding: 40px 50px 50px;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+
+  }
+
+  .form-login h1{
+    font-size: 30px;
+    margin-bottom: 60px;
+    color: white;
+    position: relative;
+}
+
+.form-login h1::after{
+    content: '';
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background-color: #04BD7D;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+  
+.form-login h2 {
+    margin-top: 0;
+  }
+
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    z-index: 999; /* Colocar por debajo de los formularios */
+    pointer-events: all; /* Habilitar eventos en el overlay */
+
+  }
+
+  form button {
+    background-color: #595170;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+form button:hover {
+    background-color: #30a836;
+}
+
+
+
+/*------------------------------------------Forms Registros--------------------------------------------------------*/
+.form-registro{
+    margin: 10px;
+    margin-top: 20px;
+    margin-left: 60px;
+
+}
+
+.form-group {
+    align-items: center;
+    display: flex;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+
+
+label {
+    font-family: 'Georgia', serif;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 20px;
+    min-width: 250px;
+}
+
+input {
+    font-family: 'Georgia', serif;
+    padding: 8px;
+    width: auto;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+
+
+
+/* Estilo para los radio botones ocultos */
+.form-group input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+ }
+
+
+ /* Estilo para los labels como radio botones */
+.form-group label[name="userType"] {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: #fff;
+    color: #000000;
+}
+
+/* Estilo para el label seleccionado */
+.form-group input[name="userType"]:checked + label[name="userType"] {
+    background-color: #b58b1f;
+    color: white;
+}
+
+.form-group label[name="userType"]:hover {
+    background-color: hotpink;
+}
+
+
+
+  /*-----------------------------------------Album-Pelicula--------------------------------------------------------*/
+
+.contenedor-albumes {
+    font-family: 'Montserrat', sans-serif;
+    position: relative; /* Necesario para posicionar los botones de manera absoluta */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    overflow: hidden; /* Oculta los álbumes fuera de vista */
+    margin-bottom: 80px;
+}
+
+.album-wrap {
+    display: flex;
+    transition: transform 0.5s ease; /* Este puede ser eliminado si no se ve bien al arrastrar */
+
+}
+
+
+
+.album {
+    text-align: center;
+    margin: 0 10px;
+    max-width: 200px;
+    min-width: 18%;
+    box-sizing: border-box;
+    flex: 0 0 auto; /* No permitir que los álbumes crezcan más allá de su contenido */
+}
+
+.album img {
+    width: 250px;
+    height: auto;
+}
+
+.album p {
+    margin: 5px 0 0;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.723);
+    color: white;
+    border: none;
+    padding: 25px;
+    font-size: 35px;
+    margin: 0;
+    cursor: pointer;
+    
+    z-index: 10; /* Asegura que los botones estén sobre los álbumes */
+}
+
+button.prev {
+    left: 0;
+}
+
+button.next {
+    right: 0;
+}
+
+/*------------------------------------------Noticia--------------------------------------------------------*/
+section{
+    margin: 0;
+}
+.div-noticia{
+    background-image: url(imagen/fondo_verde.avif);
+    background-size: cover;
+    width: calc(100% +100px);
+    height: 100%;
+ 
+  
+
+
+    
+ 
+}
+.container {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos a lo largo del contenedor */
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+
+.left-side {
+    padding-left: 50px;
+}
+
+.right-side {
+    padding-right: 50px;
+}
+
+figure img{
+    width: 600px;
+    height: 400px;
+}
+
+/*------------------------------------------Pelicula1 Inside Out2--------------------------------------------------------*/
+.div-pelicula{
+    width: 100%; /* Hace que el div ocupe el 100% del ancho de la ventana */
+    height: 500px;
+    box-sizing: border-box; /* Incluye padding y border en el ancho total del div */
+    background-repeat: no-repeat;
+    box-shadow: inset 100px 10px 200px rgba(0, 0, 0, 0.5), inset -20px 10px 200px rgba(0, 0, 0, 0.5);
+    
+}
+/*box-shadow: [inset] [offset-x] [offset-y] [blur-radius] [spread-radius] [color];*/
+
+.div-pelicula a,.div-sucursal a {
+    background-color: rgb(209, 25, 25);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    
+}
+
+.div-pelicula a:hover {
+    background-color: rgb(61, 74, 196);
+}
+
+.div-sinopsis{
+    font-family: 'Roboto', sans-serif;
+    margin-left: 60px;
+    margin-right: 60px;
+    font-weight: normal;
+    flex:50%;
+}
+
+.div-credito{
+    font-family: 'Roboto', sans-serif;
+    margin-left: 60px;
+    margin-right: 60px;
+    font-weight: normal;
+   
+    
+}
+/*------------------------------------------Pelicula Horario--------------------------------------------------------*/
+.div-horario{
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 100px;
+}
+
+.div-sucursal{
+    margin-top:40px;
+    margin-bottom: 40px;
+    padding: 10x;  
+}
+
+.div-sucursal p{
+    display: flex;
+    min-width: 300px;
+}
+
+.div-sucursal a{
+    max-width: 100px;
+    max-height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+}
+
+/*------------------------------------------Pelicula Horario--------------------------------------------------------*/
+#genero{
+    display: flex;
+
+
+}
+
+.album-container {
+    display: flex; /* Mostrar los álbumes en una línea */
+    flex-wrap: wrap; /* Permitir que los álbumes se envuelvan a la siguiente línea */
+    justify-content: space-between; /* Distribución uniforme de los álbumes */
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  .album-container .album-genero {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: 0 10px;
+    margin-bottom: 30px;
+    width: calc(25% - 20px); /* Cada álbum ocupa el 25% del contenedor menos el espacio entre ellos */
+    box-sizing: border-box; /* Incluir padding y borde en el ancho total */
+    padding: 10px; /* Espacio entre álbumes */
+  }
+
+  .album-genero img {
+    width: 200px;
+    height: auto;
+}
+
+.album-genero p {
+    margin: 5px 0 0;
+}
+
+/*-------------------------------------SALA----------------------*/
+.div-horario button{
+    background-color: rgb(209, 25, 25);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.tabla-botones {
+    border-collapse: collapse;
+    width: 100%;
+}
+.tabla-botones td {
+    padding: 10px;
+    text-align: center;
+}
+.tabla-botones button {
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tabla-botones img {
+    width: 50px; 
+    height: auto;
+}
+.tabla-botones span {
+    margin-top: 5px;
+}
+
+/*------------------------------------------Pelicula Genero--------------------------------------------------------*/
+select{
+margin: 10px;
+margin-left: 60px;
+background-color: rgb(209, 25, 25);
+color: white;
+border: none;
+padding: 15px 20px;
+cursor: pointer;
+border-radius: 20px;
+font-size: 20px;
+font-weight: bold;
+text-decoration: none; 
+}
+
+
+/*------------------------------------------Pelicula Genero--------------------------------------------------------*/
+.historial-boletos {
+    background-color: rgba(43, 38, 38, 0.6); /* Color con transparencia del 60% */
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-left: 300px;
+    margin-right: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.historial-boletos h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.boletos-comprados {
+    margin-top: 10px;
+}
+
+.boletos-comprados .boleto {
+    background-color: rgba(222, 187, 80, 0.6);
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.boletos-comprados .boleto p {
+    margin: 0;
+    font-size: 16px;
+}
+
+
+.boletos-comprados .boleto .info {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #000000;
+    font-weight: bolder;
+}
+
+/* Estilo para el contenedor */
+.boleto-h {
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    overflow-x: auto; /* Permite el desplazamiento horizontal si es necesario */
+    margin: 20px auto;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle estilo */
+}
+
+/* Estilo para la tabla */
+.boleto-h table {
+    border: 1;
+    width: 100%; /* La tabla ocupa todo el ancho del contenedor */
+    border-collapse: collapse; /* Elimina espacios entre bordes */
+    font-family: Arial, sans-serif;
+    text-align: left;
+}
+
+/* Estilo para las celdas de encabezado */
+.boleto-h th {
+    background-color: #4CAF50; /* Color del encabezado */
+    color: white; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+/* Estilo para las celdas */
+.boleto-h td {
+    padding: 8px; /* Espaciado interno */
+    border: 1px solid #ddd; /* Borde */
+}
+
+
+.tabla-historial{
+    width: 100%; /* Expande al tamaño del contenedor */
+    border-collapse: collapse; /* Elimina espacios entre celdas */
+    font-family: Arial, sans-serif;
+    text-align: left;
+}
+/*------------------------------------------NOSOTROS--------------------------------------------------------*/
+.nosotros-container {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos a lo largo del contenedor */
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.nosotros-container p{
+    font-size: 14px;
+    margin: 0;
+}
+
+.nosotros-container ul{
+    padding-left: 0;
+    font-size: 16px;
+}
+
+/*------------------------------------------Cantidad de boleto--------------------------------------------------------*/
+.boleto{
+    margin-bottom: 0;
+}
+
+.boleto select{
+    background-color: #dab55a;
+    padding: 5px;
+    margin: 10px;
+    min-width: 100px;
+    border-radius: 10px;
+    
+}
+
+.boleto{
+    margin-top: 30px;
+}
+
+/*Boton Compra en pelicula*/
+.btn-comprar {
+    background-color: red; /* Color de fondo rojo */
+   
+    font-size: 16px; /* Tamaño de fuente */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 12px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor tipo puntero al pasar por encima */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+}
+
+.btn-comprar:hover {
+    background-color: darkred; /* Cambia el color de fondo cuando se pasa el mouse */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño del botón */
+}
+
+.btn-comprar:active {
+    background-color: crimson; /* Color al hacer clic */
+}
+
+
+
+/* Cambiar el color al pasar el mouse */
+.silla:hover {
+    opacity: 0.8;
+}
+
+/* Ajustar la tabla */
+table {
+    border-collapse: collapse; /* Eliminar espacio entre bordes */
+    margin: auto; /* Centrar la tabla */
+}
+
+/* Bordes más finos para las celdas */
+table td {
+    border: 1px solid black; /* Bordes visibles pero delgados */
+}
