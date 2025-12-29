@@ -1,6 +1,6 @@
 # Nombre del Proyecto
 
-Proyecto desarrollado como parte de un trabajo académico / personal.
+Cinemax
 
 ## Descripción
 Este proyecto es una aplicación web básica desarrollada en PHP, enfocada en practicar conceptos de desarrollo web y estructura de proyectos.
